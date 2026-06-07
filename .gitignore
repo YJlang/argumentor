@@ -1,0 +1,70 @@
+# ==============================================================================
+# .gitignore — git root is the XAMPP web root (htdocs).
+# Only the AI 논리 토론 시뮬레이터 project is tracked; XAMPP's own files are not.
+# ==============================================================================
+
+# --- XAMPP default install files (NOT part of this project) -------------------
+/xampp/
+/dashboard/
+/webalizer/
+/img/
+/applications.html
+/bitnami.css
+/favicon.ico
+/index.php
+
+# --- Secrets & local config ---------------------------------------------------
+.env
+.env.*
+!.env.example
+config.local.php
+*.local.php
+secrets.php
+**/credentials.json
+
+# --- PHP / Composer (when backend implementation begins) ----------------------
+/vendor/
+composer.phar
+.phpunit.result.cache
+.phpunit.cache/
+.php-cs-fixer.cache
+.phpstan.cache/
+
+# --- Node / frontend prototype (LogicalAI/) -----------------------------------
+node_modules/
+dist/
+build/
+.vite/
+*.tsbuildinfo
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# --- Logs & runtime -----------------------------------------------------------
+*.log
+/logs/
+/tmp/
+/cache/
+
+# --- Database dumps / local data ----------------------------------------------
+*.sql.gz
+*.dump
+*.sqlite
+*.sqlite3
+
+# --- OS / editor cruft --------------------------------------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*~
+
+# --- IDE ----------------------------------------------------------------------
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# --- Claude Code local settings (keep shared config, ignore personal/local) ---
+.claude/settings.local.json
