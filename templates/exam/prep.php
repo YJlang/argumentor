@@ -16,7 +16,7 @@ $stanceLabel = DebateOptions::STANCES[$debate['user_stance']] ?? (string) $debat
           x-data="{ left: 420, submitting: false, tick: null,
                     fmt() { const m = Math.floor(this.left/60), s = this.left%60; return m + ':' + String(s).padStart(2,'0'); },
                     start() { this.tick = setInterval(() => { if (this.left > 0) { this.left--; } else { clearInterval(this.tick); this.go(); } }, 1000); },
-                    go() { if (this.submitting) return; this.submitting = true; this.$el.submit(); } }"
+                    go() { if (this.submitting) return; this.submitting = true; this.$root.submit(); } }"
           x-init="start()"
           class="w-full max-w-2xl space-y-5 fade-up">
 

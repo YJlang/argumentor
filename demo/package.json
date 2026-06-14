@@ -1,0 +1,9 @@
+{
+  "name": "argumentor-demo",
+  "private": true,
+  "type": "module",
+  "description": "Playwright 시연 영상 녹화 (ArguMentor PHP 앱)",
+  "dependencies": {
+    "playwright": "^1.49.0"
+  }
+}
